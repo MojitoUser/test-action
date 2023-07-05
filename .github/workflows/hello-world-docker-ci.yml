@@ -12,4 +12,4 @@ jobs:
       - name: start docker
         uses: ./hello-world-docker-action
         with:
-          custom-input: beHappy
+          who-to-greet: beHappy
