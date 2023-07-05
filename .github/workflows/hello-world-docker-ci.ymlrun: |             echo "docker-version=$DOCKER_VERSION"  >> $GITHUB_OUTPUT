@@ -13,8 +13,10 @@ jobs:
         uses: ./hello-world-docker-action
         with:
           who-to-greet: beHappy
-        
+          run: |
+            echo "Result : ${{ GITHUB_OUTPUT }}" 
+            
       - name: check output
         run: |
-          echo "Result : ${{ steps.start-docker.GITHUB_OUTPUT }}"
+          echo "Result : ${{ steps.start-docker.output.result }}"
 
