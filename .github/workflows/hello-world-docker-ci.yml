@@ -15,6 +15,6 @@ jobs:
           who-to-greet: beHappy
           
       - name: check output
-      - run: |
+        run: |
           echo "Result : ${{ GITHUB_OUTPUT }}"
 
