@@ -16,5 +16,5 @@ jobs:
           
       - name: check output
         run: |
-          echo "Result : ${{ GITHUB_OUTPUT }}"
+          echo "Result : ${{ $GITHUB_OUTPUT }}"
 
