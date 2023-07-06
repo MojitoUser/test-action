@@ -5,13 +5,8 @@ on: workflow_dispatch
 jobs:
   test-action:
     runs-on: ubuntu-latest
-    outputs: 
-      name: whoitwas
-      description: 'someone'
-      value: ${{ start-docker.outputs.GITHUB_OUTPUT }}    
-      
+     
     steps:
-    
       - name: Checkout
         uses: actions/checkout@v3.3.0      
         
@@ -23,5 +18,5 @@ jobs:
             
       - name: check output
         run: |
-          echo "Result : ${{ whoitwas }}"
+          echo "Result : ${{ steps.docker.outputs.GITHUB_OUTPUT }}"
 
