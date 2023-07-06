@@ -8,7 +8,7 @@ jobs:
     outputs: 
       name: whoitwas
       description: 'someone'
-      value: ${{ jobs.test-action.start-docker.outputs.GITHUB_OUTPUT }}    
+      value: ${{ start-docker.outputs.GITHUB_OUTPUT }}    
       
     steps:
     
